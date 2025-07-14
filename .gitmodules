@@ -1,0 +1,6 @@
+[submodule "base"]
+	path = base
+	url = https://github.com/Mottle/FallacyBase.git
+[submodule "survive"]
+	path = survive
+	url = https://github.com/Mottle/FallacySurvive.git
