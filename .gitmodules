@@ -4,3 +4,6 @@
 [submodule "survive"]
 	path = survive
 	url = https://github.com/Mottle/FallacySurvive.git
+[submodule "thermal"]
+	path = thermal
+	url = https://github.com/Mottle/FallacyThermal.git

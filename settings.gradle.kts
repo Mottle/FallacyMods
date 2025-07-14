@@ -26,4 +26,4 @@ plugins {
 
 rootProject.name = "Fallacy"
 
-include("base", "survive")
+include("base", "survive", "thermal")
