@@ -1,5 +1,3 @@
-import org.gradle.kotlin.dsl.maven
-
 // The settings file is the entry point of every Gradle build.
 // Its primary purpose is to define the subprojects.
 // It is also used for some aspects of project-wide configuration, like managing plugins, dependencies, etc.
@@ -26,4 +24,4 @@ plugins {
 
 rootProject.name = "Fallacy"
 
-include("base", "survive", "thermal")
+include("base", "survive", "thermal", "hud")
