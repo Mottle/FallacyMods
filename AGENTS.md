@@ -25,14 +25,17 @@
 - Gradle wrapper is `8.13` (`gradle/wrapper/gradle-wrapper.properties`).
 - All mod modules use `net.neoforged.moddev` `2.0.113`.
 - All modules resolve local jars from `../lib` via `flatDir`, so root `lib/` can affect compilation.
+- Tau usage guide for agents: `lib/TAU_AGENT_GUIDE.md`.
+- If a task needs Tau UI/menu work, read `lib/TAU_AGENT_GUIDE.md` before making changes.
 
 ## Commands That Usually Matter
+- Command execution preference: because the real dev environment is Windows, prefer running Gradle via `powershell.exe ./gradlew ...` from WSL/OpenCode.
 - Build one module from root (preferred for focused verification):
-  - `./gradlew :base:build`
-  - `./gradlew :thermal:build`
-  - `./gradlew :survive:build`
-  - `./gradlew :hud:build`
-- Fast compile check after edits: `./gradlew :<module>:compileKotlin`
+  - `powershell.exe ./gradlew :base:build`
+  - `powershell.exe ./gradlew :thermal:build`
+  - `powershell.exe ./gradlew :survive:build`
+  - `powershell.exe ./gradlew :hud:build`
+- Fast compile check after edits: `powershell.exe ./gradlew :<module>:compileKotlin`
 - There are no `src/test` directories currently; do not assume tests provide coverage.
 - NeoForge run configs are declared per module (`client`, `server`, `gameTestServer`, `data`) and mapped to generated Gradle run tasks.
 
