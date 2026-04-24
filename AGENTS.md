@@ -51,6 +51,7 @@
   - `survive/src/main/kotlin/dev/deepslate/fallacy/survive/TheMod.kt`
   - `hud/src/main/kotlin/dev/deepslate/fallacy/hud/TheMod.kt`
 - Event wiring is mostly `@EventBusSubscriber`-based (commands, registries, GUI hooks); check subscriber objects before adding manual init logic.
+- **Do not use `bus = EventBusSubscriber.Bus.MOD`**. The `bus` parameter on `@EventBusSubscriber` is deprecated in newer NeoForge/KFF versions. For MOD bus events (e.g., `FMLConstructModEvent`, `RegisterMenuScreensEvent`), register listeners manually in the `@Mod` class's `init` block via `MOD_BUS.addListener(...)` or `MOD_BUS.register(...)`. Only use `@EventBusSubscriber(modid = ...)` without a `bus` argument for GAME bus events.
 
 ## Git Gotcha (Easy to Miss)
 - Root `git status` only shows submodule pointer changes for `base`, `thermal`, `survive`.
