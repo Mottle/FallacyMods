@@ -18,7 +18,7 @@
   - `hud/AGENTS.md`
 - When a task touches a specific module, read that module's `AGENTS.md` first, then apply root rules.
 - For module-specific details, module `AGENTS.md` takes precedence; for cross-module/repo-wide constraints, this root `AGENTS.md` takes precedence.
-- If module architecture, entrypoints, registration flow, or build conventions change, update the corresponding module `AGENTS.md` in the same change.
+- If module architecture, entry points, registration flow, or build conventions change, update the corresponding module `AGENTS.md` in the same change.
 
 ## Toolchain and Build Facts
 - Java toolchain is 21 and Kotlin JVM target is 21 in all modules.
@@ -35,7 +35,7 @@
   - `powershell.exe ./gradlew :thermal:build`
   - `powershell.exe ./gradlew :survive:build`
   - `powershell.exe ./gradlew :hud:build`
-- Fast compile check after edits: `powershell.exe ./gradlew :<module>:compileKotlin`
+- *Fast compile check after edits: `powershell.exe ./gradlew :<module>:compileKotlin`*
 - There are no `src/test` directories currently; do not assume tests provide coverage.
 - NeoForge run configs are declared per module (`client`, `server`, `gameTestServer`, `data`) and mapped to generated Gradle run tasks.
 
@@ -44,7 +44,7 @@
 - `src/generated/resources` is included in main resources for modules; treat it as generated source-of-truth output for datagen.
 - For thermal datapack changes, update/regenerate `thermal/src/generated/resources/...`, not runtime save data under `run/`.
 
-## Real Entrypoints
+## Real Entry points
 - Main mod objects:
   - `base/src/main/kotlin/dev/deepslate/fallacy/base/TheMod.kt`
   - `thermal/src/main/kotlin/dev/deepslate/fallacy/thermal/TheMod.kt`
